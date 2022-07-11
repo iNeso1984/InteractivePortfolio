@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -7,24 +7,18 @@
 body {
   min-height: 100vh;
   background-repeat: no-repeat;
-   background-image:linear-gradient( #190432 , rgb(2, 3, 18),   #180547);
-  font-family: 'Space Mono', monospace, sans-serif;
+  background-image: linear-gradient(#190432, rgb(2, 3, 18), #180547);
+  font-family: "Space Mono", monospace, sans-serif;
   border-radius: 50%;
   background-color: #180547;
-  
 }
 .container {
-
   background-repeat: no-repeat;
-  
 
   position: relative;
-  top:10%;
- 
- 
+  top: 10%;
 }
 button {
- 
   background-color: Transparent;
   color: rgb(12, 97, 243);
   font-size: x-large;
@@ -34,7 +28,6 @@ button {
   margin-left: auto;
   margin-right: auto;
   cursor: pointer;
-  margin-top: 50px;
 }
 
 h1 {
@@ -43,48 +36,16 @@ h1 {
   font-family: sans-serif;
   text-align: center;
   cursor: pointer;
-  position:absolute;
+  position: absolute;
   z-index: 50;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
- 
+
   /* aligns text to center of the page!*/
 }
-h2{
-    color: white;
-  font-size: 2rem;
-  font-family: sans-serif;
-  text-align: center;
-  cursor: pointer;
-  position:absolute;
-  z-index: 50;
-  top: 100%;
-  left: 50%;
-  transform: translate(-50%, -50%);
- 
-}
-.aboutText{
-color: white;
-  font-size: 1.5rem;
-  font-family: sans-serif;
-  text-align: center;
-  cursor: pointer;
-  position:absolute;
-  z-index: 50;
-  top: 70%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-h1:hover{
-    color:#6bb1e7;
-}
-a:hover{
-   opacity: 20;
-   border-radius: 50%;
-	transform: translateY(-20px);
-	transition-duration: 1.5s;
-	box-shadow: 0 7px 20px 15px rgba(0, 123, 255, 0.417);
+h1:hover {
+  color: #6bb1e7;
 }
 
 .stop {
@@ -92,8 +53,8 @@ a:hover{
 }
 
 .play {
- display: block;
-opacity:0;/*Make sure you set the play button to show on click!*/
+  display: block;
+  opacity: 0; /*Make sure you set the play button to show on click!*/
 }
 
 #rings {
@@ -108,11 +69,9 @@ opacity:0;/*Make sure you set the play button to show on click!*/
   margin-left: auto;
   margin-right: auto;
   margin-top: 10%;
-  
 }
 
 span {
- 
   opacity: 0;
 }
 
@@ -127,11 +86,10 @@ span.fade {
   display: none;
 }
 
-.showStars{
+.showStars {
   opacity: 1;
   z-index: 10;
 }
-
 
 /*animations*/
 
@@ -142,7 +100,6 @@ span.fade {
   100% {
     opacity: 1;
   }
-
 }
 
 @keyframes opacity {
@@ -155,22 +112,26 @@ span.fade {
   }
 }
 
-@keyframes illuminate{
-  from{
-     background: radial-gradient(
-    /* ellipse at center,
-   
-    
-    #6df3f57c 2%,
-    #0b6d9e5c 10%,
-    #180c4b 25%,
-    #190e3f 50%,
-    #170109 100% */
-  ); background: radial-gradient(circle at 25% 5%, rgb(165, 165, 165) 1px, rgb(11, 96, 107) 3%, rgb(4, 21, 43) 60%, rgb(8, 25, 75) 100%);  
-   
-
+@keyframes illuminate {
+  from {
+    background: radial-gradient(
+      ellipse at center,
+      #3a0c8450 5%,
+      #0c144b 25%,
+      #1c0e3f 50%,
+      #0d021c 100%
+    );
   }
-
+  to {
+    background: radial-gradient(
+      ellipse at center,
+      #d8e79450 5%,
+      #0c144b 25%,
+      #190625 50%,
+      #0d021c 100%
+    );
+    animation-delay: 20s, 30s;
+  }
 }
 
 .image {
@@ -196,9 +157,9 @@ span.fade {
 }
 
 /*touch animation*/
-canvas{
+canvas {
   display: none;
-  display:grid;
+  display: grid;
   justify-content: center;
   animation: spin 100s linear infinite;
   max-width: 100%;
@@ -209,168 +170,27 @@ canvas{
   border-radius: 50%;
   position: relative;
   cursor: pointer;
-  border:2px double rgba(36, 4, 46, 0.242);
+  border: 2px double rgba(36, 4, 46, 0.242);
   background: radial-gradient(
     ellipse at center,
-   
     #3a0c8450 5%,
     #0c144b 25%,
     #1c0e3f 50%,
     #0d021c 100%
   );
   background-repeat: no-repeat;
-  
-
-
-  
+  animation: illuminate ease-in 20s;
+  animation: spin infinite 50s;
 }
-canvas:hover{
-
-animation:illuminate infinite ease-in-out 20s ;
+canvas:hover {
+  background: radial-gradient(
+    ellipse at center,
+    #401eff50 5%,
+    #180c4b 25%,
+    #190e3f 50%,
+    #170109 100%
+  );
 }
-body:hover{
-  background-image:linear-gradient( #32042a , rgb(2, 3, 18),   #180547);
+body:hover {
+  background-image: linear-gradient(#32042a, rgb(2, 3, 18), #180547);
 }
-/*Nav---->*/
-a{
-  text-decoration: none;
-}
-
-.navbar{
-  display: flex;
-  justify-content: space-between;
-  width: 100vw;
-  padding-top: 2%;
-  padding-bottom: 2%;
-
-  font-size: 20px;
-}
-
-.logo{
-  margin-left: 5%;
-  color: #ffffff;
-  font-size: 25px;
-  font-weight: bold;
-
-}
-.logo_header{
-  display: flex;
-  margin-left: 2%;
-}
-
-.main_nav{
-  display: flex;
-  width: 50%;
-  float: right;
-  margin-right: 2%;
-  justify-content: space-between;
-  list-style: none;
-}
-
-.main_nav li{
-  display: inline;
-  color: #ffffff;
-}
-.main_nav li a{
-  color: #ffffff;
-}
-.navbar_toggle{
-  display: none;
-}
-/*Nav--->toggle*/
-
-/*Footer--->*/
-
-.footer-basic-centered {
- color: white;
-  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
-  box-sizing: border-box;
-  width: 100%;
-  text-align: center;
-  font: normal 18px sans-serif;
-  margin-top: 10%;
- 
-}
-
-/*-----------small screens------------------------>*/
-@media only screen and (max-width : 815px){
-/*Nav*/
-  .navbar{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 100vw;
-    padding-top: 2%;
-    padding-bottom: 2%;
-   
-    font-size: 20px;
-  }
-
-  .main_nav{
-    display: none;
-  }
-
-  .show_nav{
-    padding-top: 2%;
-    display: flex;
-    width: 100vw;
-    height: 100vh;
-    flex-direction: column;
-    justify-content: flex-start;
-  }
-
-  .main_nav li{
-    width: 100%;
-    height: 50px;
-    font-size: 25px;
-    justify-content: center;
-    text-align: center;
-    padding: 0%;
-  }
-  .navbar_toggle {
-    margin-left: 5%;
-    margin-right: 5%;
-    font-size: 30px;
-    color: #ffffff;
-    background: transparent;
-    border-color: transparent;
-    transition: all 0.3s linear;
-    cursor: pointer;
-    display: block;
-  }
-  .logo_header{
-    width: 100%;
-    justify-content: space-between;
-    margin-right: 2%;
-  }
-  .fancy{
-    position: absolute;
-    margin-top: 20%;
-  }
-
-  /*footer*/
-   .footer-basic-centered {
-    padding: 35px;
-    margin-top: 20%;
-  }
-
-  /*about text*/
-  .aboutText{
-color: white;
-  font-size: 1.5rem;
-  font-family: sans-serif;
-  text-align: center;
-  cursor: pointer;
-  position:absolute;
-  z-index: 50;
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-  
-  /*canvas*/
-
-  
-} 
-
-
