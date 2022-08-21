@@ -63,7 +63,7 @@ function scene1(){
  firstScene.style.display="block";
  canvas.style.display="block";
 const audio = new Audio(
-  "https://raw.githubusercontent.com/iNeso1984/InteractiveDesign1/main/Light_in_the_Dark_Sonic_Mystery.mp3"
+ "https://raw.githubusercontent.com/iNeso1984/InteractivePortfolio/main/Light_in_the_Dark_Sonic_Mystery.mp3"
 );
 showPlayButton.style.opacity="1";
 let playMusic = () => {
